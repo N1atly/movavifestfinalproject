@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Calendar Clone</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="calendar-container">
+    <div class="calendar-header">
+      <h1 class="calendar-title">📅 Календарь</h1>
+      <div class="calendar-nav">
+        <button id="prev-week">◀</button>
+        <div class="current-week" id="current-week-range"></div>
+        <button id="next-week">▶</button>
+      </div>
+      <button class="add-event-btn" id="open-modal">Добавить событие</button>
+    </div>
+    
+    <div class="week-header">
+      <div class="day-spacer"></div>
+    </div>
+
+    <div class="time-grid">
+      <div class="time-column">
+      </div>
+
+      <div class="events-column" id="events-container">
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="event-modal">
+    <div class="modal-content">
+      <h3 class="modal-title">Добавить событие</h3>
+      <div class="form-group">
+        <label for="modal-event-title">Название</label>
+        <input type="text" id="modal-event-title" placeholder="Введите название">
+      </div>
+      
+      <div class="date-row">
+        <div class="form-group">
+          <label for="modal-event-date">Дата начала</label>
+          <input type="date" id="modal-event-date">
+        </div>
+        <div class="form-group">
+          <label for="modal-event-start">Время начала</label>
+          <input type="time" id="modal-event-start" value="09:00">
+        </div>
+      </div>
+      
+      <div class="date-row">
+        <div class="form-group">
+          <label for="modal-event-end-date">Дата окончания</label>
+          <input type="date" id="modal-event-end-date">
+        </div>
+        <div class="form-group">
+          <label for="modal-event-end">Время окончания</label>
+          <input type="time" id="modal-event-end" value="10:00">
+        </div>
+      </div>
+      
+      <div class="modal-actions">
+        <button class="btn-secondary" id="cancel-event">Отмена</button>
+        <button class="btn-primary" id="save-event">Сохранить</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
